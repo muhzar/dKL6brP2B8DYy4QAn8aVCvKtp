@@ -1,0 +1,20 @@
+.widget {
+    border: solid 1px #cecece;
+}
+
+.widget .content {
+
+}
+
+.widget h3 {
+    display: block;
+    width: 100%;
+    background-color: #fff; 
+    padding: 4px;
+    margin: 0;
+    text-align: center;
+}
+
+.widget ul {
+  list-style-type: none;
+}

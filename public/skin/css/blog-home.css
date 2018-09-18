@@ -1,0 +1,212 @@
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.firstHeading {
+    font-size: 18px;
+    color: #000;
+}
+
+#bodyContent p{
+    color: #000;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#map {
+    height: 700px;
+    width: 100%;
+    display: block;
+    position: relative;
+    /*margin-top: 80px;*/
+
+}
+
+.patrolstatuslist {
+    /* background-color: red; */
+    /* height: 80px; */
+    max-height: 80px;
+    overflow: scroll;
+}
+.route-page #map, .cluster-page #map {
+    height: 650px;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.cluster-page label {
+    width: 100%;
+    text-align: center;
+}
+.route-page .div-command, .cluster-page .div-command {
+    padding: 6px 6px 4px;
+    color: #337ab7;
+    background-color: #fff;
+    z-index: 2;
+    position: absolute;
+    display: inline-block;
+    top: 30px;
+    right: 30px;
+    min-width: 250px;
+    /* min-height: 300px; */
+}
+.cluster-page .div-command {
+    margin-top: 120px;
+}
+
+.route-page .command-btn {
+    text-align: right;
+}
+
+.route-page label {
+    width: 130px;
+}
+
+.outoftrack {
+    color: red;
+}
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.claster-name {
+    font-family: 'Catamaran', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    top: 0px;
+    color: #fff;
+    z-index: 1;
+    display: block;
+    /*left: 50%;*/
+    border-color: green;
+    background-color: #337ab7;
+    padding: 20px;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    height: 80px;
+}
+
+.claster-name span {
+    display: inline-block;
+    float: left;
+}
+
+body {
+	position: relative;
+	background-color: #000;
+	color: #fff;
+	padding-bottom: 60px;
+	/*padding-top: 54px;*/
+	min-height: 100%;
+}
+
+footer {
+	height: 60px;
+	padding: 20px 0;
+	background-color: #fff !important;
+	color: #000;
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+
+
+#floating-panel {
+	visibility: hidden;
+	color: red;
+	position: absolute;
+	font-size: 20px;
+	top: 10px;
+	left: 25%;
+	z-index: 5;
+	/*background-color: #fff;
+	padding: 5px;
+	border: 1px solid #999;*/
+	text-align: center;
+	font-family: 'Roboto','sans-serif';
+	line-height: 30px;
+	padding-left: 10px;
+}
+#floating-panel {
+	margin-left: -52px;
+}
+
+@media (min-width: 992px) {
+  body {
+  }
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a, .sidenav .selectCluster{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
