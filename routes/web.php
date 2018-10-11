@@ -20,6 +20,7 @@ Route::get('cluster/all', 'Frontend\IndexController@cluster');
 Route::get('cluster/{cluster}', 'Frontend\IndexController@cluster');
 
 
+
 Route::get('geo', 'Frontend\IndexController@getCoordinate');
 
 
@@ -44,6 +45,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('cms/log', 'Backend\LogController@index');
 	Route::get('cms/history', 'Backend\HistoryController@index');
     Route::get('cms/history/map', 'Backend\HistoryController@map');
+    Route::resource('cms/guardoncluster', 'Backend\GuardClusterController');
     Route::post('clusters/checkpoint/save', 'Backend\TrackPointController@saveByMap');
 
 
@@ -53,7 +55,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('cms/cluster/setcheckpoint', 'Backend\TrackCoordinateController@setByMap');
 
-		Route::resource('cms/user', 'Backend\UserController');
+	    Route::resource('cms/user', 'Backend\UserController');
 		Route::resource('cms/category', 'Backend\CategoryController');
 		Route::resource('cms/page', 'Backend\PageController');
 		Route::resource('cms/faq', 'Backend\FaqController');

@@ -53,7 +53,7 @@
             </div>
             @foreach($clusters as $cluster)
             <div class="col-md-2">
-                <a href="/cluster/{{ $cluster->code }}">
+                <a href="/cluster/{{ $cluster->id }}">
                     <div class="cluster">
                         <img src="images/cluster/{{ strtolower($cluster->code) }}.png" class="img-responsive">
                         <div class="text-center" style="display: block;"><span class="title">{{ $cluster->name }}</span></div>

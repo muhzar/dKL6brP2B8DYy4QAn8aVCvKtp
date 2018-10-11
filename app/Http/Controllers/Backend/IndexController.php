@@ -17,8 +17,7 @@ class IndexController extends Controller
 
     public function index()
     {
-        $data['schedules'] = Schedule::where('assign_date', date('Y-m-d'))->get();
-        return view('backend.home', $data);
+        return view('backend.home');
     }
     
 }

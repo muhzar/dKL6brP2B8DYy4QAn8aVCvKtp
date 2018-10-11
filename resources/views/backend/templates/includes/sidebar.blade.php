@@ -35,10 +35,16 @@
             <span>Guard</span>
           </a>
         </li>
-        <li class="">
+        <!-- <li class="">
           <a href="{{ url('cms/schedule') }}">
             <i class="fa fa-user-secret"></i>
             <span>Schedule</span>
+          </a>
+        </li> -->
+        <li class="">
+          <a href="{{ url('cms/guardoncluster') }}">
+            <i class="fa fa-user-secret"></i>
+            <span>Cluster Guard</span>
           </a>
         </li>
         <li class="">

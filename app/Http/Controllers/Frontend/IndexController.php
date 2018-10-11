@@ -28,25 +28,25 @@ class IndexController extends FrontController
         return view('frontend.home', $this->getHTMLData());
     }
 
-    public function cluster($clusterName = null)
+    public function cluster($clusterId = null)
     {
-        if ($clusterName == null) {
+        if ($clusterId == null) {
             $this->setTitle('Dashboard Alam Sutera');
             $this->setVar('clusters', Cluster::orderBy('name', 'asc')->get());
             return view('frontend.guard-all', $this->getHTMLData());
         }
         $tracksCoo = [];
         $trackPoints = [];
-        $cluster = Cluster::where('code', $clusterName)->first();
+        $cluster = Cluster::where('id', $clusterId)->first();
         $this->setTitle('Dashboard Alam Sutera | ' . $cluster->name);
         $this->setVar('clusterName', $cluster->name);
         $clusters = Cluster::get();
-        $tracks = Track::where('cluster_code', $cluster->code)->get();
-        $points = TempRoute::where('cluster_id', $cluster->code)->where('created_at', '>=', date('Y-m-d'))->get();
+        $tracks = Track::where('cluster_id', $cluster->id)->get();
+        $points = TempRoute::where('cluster_id', $cluster->id)->where('created_at', '>=', date('Y-m-d'))->get();
 
         foreach ($tracks as $track) {
-            $tracksCoo = TrackCoordinate::where('track_code', $track->code)->orderBy('point_order', 'asc')->get();
-            $trackPoints[] = TrackCheckpoint::where('track_code', $track->code)->orderBy('point_order', 'asc')->get();
+            $tracksCoo = TrackCoordinate::where('track_id', $track->id)->orderBy('point_order', 'asc')->get();
+            $trackPoints[] = TrackCheckpoint::where('track_id', $track->id)->orderBy('point_order', 'asc')->get();
 
             // dd($track->code);
         }
