@@ -108,8 +108,8 @@ class IndexController extends FrontController
 
     public function getCoordinate(Request $req) {
         $clusterCode = $req->input('cluster-code');
-        $cluster = Cluster::where('code', $clusterCode)->first();
-        $track = Track::where('cluster_code', $clusterCode)->get();
+        $cluster = Cluster::where('id', $clusterCode)->first();
+        $track = Track::where('cluster_id', $clusterCode)->get();
 
         return response()->json([
             'geo' => [
@@ -118,6 +118,10 @@ class IndexController extends FrontController
             ],
             'track' => $track
         ]);
+    }
+
+    public function blank() {
+        
     }
     
 }

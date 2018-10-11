@@ -48,7 +48,7 @@
                         <td>{{ $post->getCluster->name }}</td>
                         <td>{{ $post->getShift->name }}</td>
                         <td>{{ date('d F Y', strtotime($post->date)) }}</td>
-                        <td><a href="{{ url('cms/history/map?guard_id=' . $post->getGuard->username . '&cluster=' . $post->getCluster->code . '&shift=' . $post->getShift->id . '&date=' .date('Y-m-d', strtotime($post->date))) }}" target="_blank">show track</a></td>
+                        <td><a href="{{ url('cms/history/map?guard_id=' . $post->getGuard->username . '&cluster_id=' . $post->getCluster->id . '&shift=' . $post->getShift->id . '&date=' .date('Y-m-d', strtotime($post->date))) }}" target="_blank">show track</a></td>
                       </tr>
                     @endforeach
                 @endif

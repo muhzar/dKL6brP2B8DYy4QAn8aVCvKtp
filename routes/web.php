@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'Frontend\IndexController@index');
+Route::get('/', 'Frontend\IndexController@blank');
 Route::get('route', 'Frontend\IndexController@route');
 Route::get('track', 'Frontend\IndexController@track');
 Route::post('track/save', 'Frontend\IndexController@saveTrack');
@@ -33,7 +33,10 @@ Route::get('pencarian', 'Frontend\SearchController@index');
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::get('cms', 'Backend\IndexController@index');
+    
+    Route::get('/dashboard', 'Frontend\IndexController@index');
+    Route::get('cms', 'Backend\IndexController@index');
+	Route::get('cms/dashboard', 'Backend\IndexController@dashboard');
 	Route::get('cms/index', 'Backend\IndexController@index');
 	Route::post('uploader', 'Backend\UploaderController@action');
 	Route::post('cms/uploads/images', 'Backend\UploadController@index');

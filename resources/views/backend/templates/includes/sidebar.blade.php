@@ -19,7 +19,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li>
-          <a href="{{ url('') }}">
+          <a href="{{ url('/cms') }}">
             <i class="fa fa-home"></i> <span>Dashboard</span>
           </a>
         </li>
@@ -46,13 +46,13 @@
             <i class="fa fa-user-secret"></i>
             <span>Cluster Guard</span>
           </a>
-        </li>
+        </li><!-- 
         <li class="">
           <a href="{{ url('cms/shift') }}">
             <i class="fa fa-user-secret"></i>
             <span>Shift</span>
           </a>
-        </li>
+        </li> -->
         <li class="">
           <a href="{{ url('cms/cluster') }}">
             <i class="fa fa-map"></i>
@@ -71,22 +71,22 @@
             <span>Route</span>
           </a>
         </li>
-        <li class="">
+        <!-- <li class="">
           <a href="{{ url('cms/livestreaming') }}">
             <i class="fa fa-flag-checkered"></i>
             <span>Live Streaming</span>
           </a>
-        </li>
-        <li class="">
+        </li> -->
+        <!-- <li class="">
           <a href="{{ url('cms/report') }}">
             <i class="fa fa-flag-checkered"></i>
             <span>Guard Report</span>
           </a>
-        </li>
+        </li> -->
         <li class="">
           <a href="{{ url('cms/history') }}">
             <i class="fa fa-flag-checkered"></i>
-            <span>History</span>
+            <span>Patrol History</span>
           </a>
         </li>
 

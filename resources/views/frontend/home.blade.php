@@ -37,20 +37,20 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12 text-center">
                 <h2>Alam Sutera Guard Monitoring</h2>
             </div>
-        </div>
+        </div> -->
         <div class="row">
-            <div class="col-md-2">
+            <!-- <div class="col-md-2">
                 <a href="/cluster/all">
                     <div class="cluster">
                         <img src="images/cluster/all.png" class="img-responsive">
                         <div class="text-center" style="display: block;"><span class="title">All</span></div>
                     </div>
                 </a>
-            </div>
+            </div> -->
             @foreach($clusters as $cluster)
             <div class="col-md-2">
                 <a href="/cluster/{{ $cluster->id }}">

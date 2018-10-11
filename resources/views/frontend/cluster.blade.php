@@ -55,7 +55,7 @@
 
 @section('content')
 <div class="cluster-page">
-    <div class="claster-name"><span><a href="/" style="color: #fff;font-size: 14px;">Home</a></span>{{ $clusterName }}</div>
+    <div class="claster-name"><!-- <span><a href="/" style="color: #fff;font-size: 14px;">Home</a></span> -->{{ $clusterName }}</div>
     <div id="map"></div>
     <div class="div-command">
         <label>INFO</label>

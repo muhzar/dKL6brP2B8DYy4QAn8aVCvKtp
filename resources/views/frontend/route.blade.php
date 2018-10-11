@@ -149,7 +149,7 @@
             <select id="cluster_code">
                 <option value="">==select==</option>
                 @foreach($clusters as $cluster)
-                    <option value="{{ $cluster->code }}">{{ $cluster->name }}</option>
+                    <option value="{{ $cluster->id }}">{{ $cluster->name }}</option>
                 @endforeach
             </select><br>
             <label>Track ID</label>

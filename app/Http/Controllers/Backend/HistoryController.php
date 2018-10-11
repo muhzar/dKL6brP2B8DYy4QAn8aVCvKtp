@@ -38,19 +38,19 @@ class HistoryController extends Controller
 
         $tracksCoo = [];
         $trackPoints = [];
-        $cluster = Cluster::where('code', $req->input('cluster'))->first();
+        $cluster = Cluster::where('id', $req->input('cluster_id'))->first();
         $data['title'] = 'Dashboard Alam Sutera | ' . $cluster->name;
         $data['clusterName'] = $cluster->name;
-        $tracks = Track::where('cluster_code', $cluster->code)->get();
-        $points = TempRoute::where('cluster_id', $cluster->code)
+        $tracks = Track::where('cluster_id', $cluster->id)->get();
+        $points = TempRoute::where('cluster_id', $cluster->id)
                         ->where('guard_id', $req->input('guard_id'))
                         ->where('shift_id', $req->input('shift'))
                         ->whereDate('created_at', $req->input('date'))
                         ->get();
             
         foreach ($tracks as $track) {
-            $tracksCoo = TrackCoordinate::where('track_code', $track->code)->orderBy('point_order', 'asc')->get();
-            $trackPoints[] = TrackCheckpoint::where('track_code', $track->code)->orderBy('point_order', 'asc')->get();
+            $tracksCoo = TrackCoordinate::where('track_id', $track->code)->orderBy('point_order', 'asc')->get();
+            $trackPoints[] = TrackCheckpoint::where('track_id', $track->code)->orderBy('point_order', 'asc')->get();
         }
 
         // $data['clusters'] = $cluster;
